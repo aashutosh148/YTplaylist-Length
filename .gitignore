@@ -1,0 +1,44 @@
+# Ignore build and compiled files
+/build/
+/bin/
+/node_modules/
+/.vscode/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore configuration files
+.env
+*.env.local
+*.env.development
+*.env.test
+*.env.production
+
+# Ignore dependencies
+package-lock.json
+yarn.lock
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore user-specific files
+.vscode/
+*.sublime-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore sensitive or environment-specific information
+*.pem
+*.key
+*.iml
+.idea/
+.vscode/
