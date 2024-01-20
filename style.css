@@ -1,0 +1,113 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; 
+    color: #333; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+    background-color: #343a40; 
+    padding: 15px;
+    color: #fff; 
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0 300px 0; 
+    text-align: center; 
+}
+.search-bar {
+    padding: 10px;
+    margin: 100px 90px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    /* margin:0 150px; */
+    cursor: pointer;
+}
+
+.dark-mode-btn {
+    background-color: #343a40; 
+    color: #fff;
+    border: none;
+    
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.github-icon {
+    margin-right:290px ; 
+}
+.fab fa-youtube youtube-icon{
+    margin-left: 90px;
+}
+
+.search-bar button:hover{
+    border-color: #f1ff5c;
+  color: white;
+  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+}
+.search-bar button {
+    height: 55px;
+    width: 200px;
+    text-align: center;
+    margin-left: 70px;
+    margin-right: 200px;
+    background: none;
+    color: #d82121;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 16px;
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+body.dark-mode.search-bar button {
+    border-color: #a2541c; /* Border color for light mode */
+    color: white;
+   
+}
+
+
+.search-bar button:hover {
+    cursor: pointer;
+}
+
+body.dark-mode .search-bar button:hover {
+    border-color: #c7d34a; 
+    color: rgb(205, 196, 196); 
+    box-shadow: 0 0.5em 0.5em -0.4em #eff31d;
+    transform: translateY(-0.25em); 
+    
+}
+/* Light Mode Hover Effect */
+   body:not(.dark-mode) .search-bar button:hover {
+    border-color: #e21515; 
+    color: #3c9b19; 
+    box-shadow: 0 0.5em 0.5em -0.4em #b11010;
+    transform: translateY(-0.25em);
+}  
+                                            

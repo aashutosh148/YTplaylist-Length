@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Length Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar h1 {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar h1 .heading-animation {
+            animation: moveAndDisappear 2s ease-in-out infinite;
+        }
+
+        .youtube-icon {
+            color: red;
+            font-size: 30px;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>
+            <i class="fab fa-youtube youtube-icon"></i>
+            <span class="heading-animation">YouTube Length Calculator</span>
+        </h1>
+        <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode </button>
+        <a href=""><i class="fab fa-github github-icon" style="color: red; font-size: 30px; "></i></a>
+    </div>
+
+    <div class="content">
+        <div class="search-bar">
+            <input style="border-radius: 8px;" type="text" id="videoUrl" placeholder="Enter YouTube video URL">
+            <button style="border-radius: 8px;" onclick="calculateLength()">Calculate Length</button>
+        </div>
+    </div>
+
+    
+    <script>
+        function calculateLength() {
+            // Add your backend logic here to calculate the video length
+            
+        }
+
+        function toggleDarkMode() {
+            const body = document.body;
+            const currentBackgroundColor = window.getComputedStyle(body).backgroundColor;
+
+            if (currentBackgroundColor === 'rgb(248, 249, 250)') {
+                body.style.backgroundColor = '#212529';
+                body.style.color = '#fff';
+            } else {
+                body.style.backgroundColor = '#f8f9fa';
+                body.style.color = '#333';
+            }
+        }
+    </script>
+</body>
+</html>
