@@ -102,7 +102,6 @@ async function fetchVideoDurations(videoIds) {
                 const duration = video.contentDetails.duration;
                 totalDurationInSeconds += parseISO8601Duration(duration);
             }
-            console.log(totalVideos);
             // console.log(totalDurationInSeconds);
         }
         return { totalVideos, totalDurationInSeconds };
@@ -126,6 +125,12 @@ function formatDuration(totalDurationInSeconds) {
         minutes: Math.max(0, Math.min(59, minutes)),
         seconds: Math.max(0, Math.min(59, seconds)),
     };
+    formattedDuration.totalDurationInSeconds = totalDurationInSeconds;
 
     return formattedDuration;
+}
+
+function calculateAdjustedDuration(totalDurationInSeconds, speed) {
+    const adjustedDurationInSeconds = totalDurationInSeconds / speed;
+    return formatDuration(adjustedDurationInSeconds);
 }

@@ -34,7 +34,7 @@ function toggleDarkMode() {
         document.querySelector(".dark-mode-btn").textContent = 'Light Mode';
     } else {
         body.style.backgroundColor = '#f8f9fa';
-        body.style.color = '#333';
+        body.style.color = '#2a2d2d';
         document.querySelector(".dark-mode-btn").textContent = 'Dark Mode';
     }
 }
@@ -49,10 +49,37 @@ document.getElementById('calculate').addEventListener('click', async function ()
     const { totalVideos, totalDurationInSeconds } = await fetchVideoDurations(allVideoId);
 
     const formattedDuration = formatDuration(totalDurationInSeconds);
-    console.log(`Total videos in the playlist: ${totalVideos}`);
-    // console.log(`Total duration of all videos: ${formattedDuration}`);
-    formattedDuration.totalDurationInSeconds = totalDurationInSeconds;
-    console.log(formattedDuration);
+    
+
+    const speed1_25x = 1.25;
+    const speed1_5x = 1.5;
+    const speed1_75x = 1.75;
+    const speed2x = 2.0;
+
+    const avg = formatDuration(totalDurationInSeconds/totalVideos);
+    const adjusted1_25x = calculateAdjustedDuration(totalDurationInSeconds, speed1_25x);
+    const adjusted1_5x = calculateAdjustedDuration(totalDurationInSeconds, speed1_5x);
+    const adjusted1_75x = calculateAdjustedDuration(totalDurationInSeconds, speed1_75x);
+    const adjusted2x = calculateAdjustedDuration(totalDurationInSeconds, speed2x);
+
+
+    function formatResult(duration) {
+        return `${duration.days > 0 ? `${duration.days} days, ` : ''}${duration.hours > 0 ? `${duration.hours} hours, ` : ''}${duration.minutes > 0 ? `${duration.minutes} minutes, ` : ''}${duration.seconds > 0 ? `${duration.seconds} seconds` : ''}`;
+    }
+
+    // Display the results on the webpage
+    document.getElementById('result').innerHTML = `
+        <p>No of videos : ${totalVideos}</p>
+        <p>Average length of video : ${formatResult(avg)}</p>
+        <p>Total length of playlist : ${formatResult(formattedDuration)}</p>
+        <p>At 1.25x : ${formatResult(adjusted1_25x)}</p>
+        <p>At 1.50x : ${formatResult(adjusted1_5x)}</p>
+        <p>At 1.75x : ${formatResult(adjusted1_75x)}</p>
+        <p>At 2.00x : ${formatResult(adjusted2x)}</p>
+    `;
+
+
+
 });
 
 

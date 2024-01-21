@@ -1,79 +1,92 @@
-
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #212529; 
-    color: #333333; 
-    transition: background-color 0.3s, color 0.3s;
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #212529;
+	color: #eae4e4;
+	transition: background-color 0.3s, color 0.3s;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .navbar {
-    background-color: #343a40; 
-    padding: 15px;
-    color: #fff; 
-    display: flex;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    margin: 0px;
-    justify-content: space-between;
-    align-items: center;
+	background-color: #343a40;
+	padding: 15px;
+	color: #e9e9e9;
+	display: flex;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	margin: 0px;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .navbar h1 {
-    margin: 0 150px 0; 
-    font-size: 24px;
-    text-align: center; 
+	margin: 0 150px 0;
+	font-size: 24px;
+	text-align: center;
 }
 .search-bar {
-    padding: 10px;
-    margin: 150px 90px 10px;
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
+	padding: 10px;
+	margin: 1px 90px 10px;
+	display: flex;
+	/* justify-content: space-between; */
+	align-items: center;
 }
 
 footer {
-    background-color: #343a40;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+	background-color: #343a40;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#title-p {
+	margin-top: 100px;
+	margin-left: 165px;
+	margin-bottom: 0px;
+	font-size: 18px;
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+#result {
+	margin-left: 165px;
+	font-size: 15px;
+	font-family: "Trebuchet MS", sans-serif;
 }
 
 .footer-content {
-    display: flex;
+	display: flex;
 }
 
 .footer-content p {
-    margin-right: 10px;
+	margin-right: 10px;
 }
 
 .footer-content a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
+	color: white;
+	text-decoration: none;
+	margin-right: 20px;
 }
 input[type="text"] {
-    border: 0px;
-    padding: 10px;
-    padding-right: 0;
-    background-color: #cdd0d3;
-    border-collapse: collapse;
-    margin-left: 64px ;
-    margin-right: 8px;
-    font-size: 16px;
-    width: 690px;
-    outline: none;
-
+	border: 0px;
+	padding: 10px;
+	padding-right: 0;
+	background-color: #cdd0d3;
+	border-collapse: collapse;
+	margin-left: 64px;
+	margin-right: 8px;
+	font-size: 16px;
+	width: 690px;
+	outline: none;
 }
 
 /* input:active {
@@ -83,126 +96,126 @@ input[type="text"] {
   } */
 
 .dark-mode-btn {
-    background-color: #343a40; 
-    color: #fff;
-    border: none;
-    margin-left: 500px ;
-    cursor: pointer;
-    font-size: 16px;
+	background-color: #343a40;
+	color: #ece8e8;
+	border: none;
+	margin-left: 500px;
+	cursor: pointer;
+	font-size: 16px;
+	font-style: bold;
 }
 .dark-mode-btn {
-    margin-right: auto;
+	margin-right: auto;
 }
 
 .github-icon {
-    margin-right:200px ; 
+	margin-right: 200px;
 }
-.fab fa-youtube youtube-icon{
-    margin-left: 90px;
-}
-
-.search-bar button:hover{
-    border-color: #e1e2cd;
-  color: white;
-  box-shadow: 0 0.5em 0.5em -0.4em #e9eadd;
-  transform: translateY(-0.25em);
-  cursor: pointer;
-}
-.search-bar button {
-    height: 39px;
-    width: 200px;
-    text-align: center;
-    margin-left: 0px;
-    margin-right: 200px;
-    background: none;
-    background-color: red;
-    color: white;
-    /* border: 2px solid; */
-    padding: 0;
-    font-size: 16px;
-    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
-}
-
-
-body.dark-mode.search-bar button {
-    border-color: #9a8576; /* Border color for light mode */
-    color: white;
-   
-}
-
-h4 {
-    color: white;
-    height: 20px;
+.fab fa-youtube youtube-icon {
+	margin-left: 90px;
 }
 
 .search-bar button:hover {
-    cursor: pointer;
+	border-color: #e1e2cd;
+	color: white;
+	box-shadow: 0 0.5em 0.5em -0.4em #e9eadd;
+	transform: translateY(-0.25em);
+	cursor: pointer;
+}
+.search-bar button {
+	height: 39px;
+	width: 200px;
+	text-align: center;
+	margin-left: 0px;
+	margin-right: 200px;
+	background: none;
+	background-color: red;
+	color: white;
+	/* border: 2px solid; */
+	padding: 0;
+	font-size: 16px;
+	transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,
+		transform 0.25s;
+}
+
+body.dark-mode.search-bar button {
+	border-color: #9a8576; /* Border color for light mode */
+	color: white;
+}
+
+h4 {
+	color: white;
+	height: 20px;
+}
+
+.search-bar button:hover {
+	cursor: pointer;
 }
 
 body.dark-mode .search-bar button:hover {
-    border-color: #c7d34a; 
-    color: rgb(205, 196, 196); 
-    box-shadow: 0 0.5em 0.5em -0.4em #eff31d;
-    transform: translateY(-0.25em); 
-    
+	border-color: #c7d34a;
+	color: rgb(205, 196, 196);
+	box-shadow: 0 0.5em 0.5em -0.4em #eff31d;
+	transform: translateY(-0.25em);
 }
 /* Light Mode Hover Effect */
-   body:not(.dark-mode) .search-bar button:hover {
-    border-color: #e21515; 
-    color:white; 
-    box-shadow: 0 0.5em 0.5em -0.4em #b11010;
-    transform: translateY(-0.25em);
-}  
-                
+body:not(.dark-mode) .search-bar button:hover {
+	border-color: #e21515;
+	color: white;
+	box-shadow: 0 0.5em 0.5em -0.4em #b11010;
+	transform: translateY(-0.25em);
+}
+
 /* Media query for screens up to 768px */
 @media only screen and (max-width: 768px) {
-    .navbar h1, .navbar button {
-        text-align: center;
-        margin: 0; /* Remove any margin for better responsiveness */
-    }
+	.navbar h1,
+	.navbar button {
+		text-align: center;
+		margin: 0; /* Remove any margin for better responsiveness */
+	}
 
-    .dark-mode-btn {
-        margin-left: auto; /* Pushes the Dark Mode button to the right */
-        margin-right: 5%; /* Add a small right margin for better spacing */
-    }
+	.dark-mode-btn {
+		margin-left: auto; /* Pushes the Dark Mode button to the right */
+		margin-right: 5%; /* Add a small right margin for better spacing */
+	}
 
-    .github-icon {
-        margin-right: 5%; /* Adjust the margin as a percentage */
-    }
+	.github-icon {
+		margin-right: 5%; /* Adjust the margin as a percentage */
+	}
 
-    /* Nested media query for screens up to 600px within the 768px query */
-    @media only screen and (max-width: 600px) {
-        .dark-mode-btn {
-            margin-left: 2%; /* Adjust the margin for better visibility */
-        }
-    }
+	/* Nested media query for screens up to 600px within the 768px query */
+	@media only screen and (max-width: 600px) {
+		.dark-mode-btn {
+			margin-left: 2%; /* Adjust the margin for better visibility */
+		}
+	}
 }
 
 /* Media query for screens up to 480px */
 @media only screen and (max-width: 480px) {
-    .search-bar button {
-        margin-right: 0;
-    }
+	.search-bar button {
+		margin-right: 0;
+	}
 
-    .github-icon {
-        margin-right: 5px; /* Adjust the margin for better visibility */
-    }
+	.github-icon {
+		margin-right: 5px; /* Adjust the margin for better visibility */
+	}
 }
 /* Media query for screens up to 320px */
 @media only screen and (max-width: 320px) {
-    .fab.fa-youtube.youtube-icon {
-        margin-left: 5px; /* Adjust the margin for better visibility */
-    }
+	.fab.fa-youtube.youtube-icon {
+		margin-left: 5px; /* Adjust the margin for better visibility */
+	}
 
-    .bx.bxs-heart {
-        margin-right: 5px; /* Adjust the margin for better visibility */
-    }
+	.bx.bxs-heart {
+		margin-right: 5px; /* Adjust the margin for better visibility */
+	}
 }
 
 /* Media query for screens between 769px and 1022px */
 @media only screen and (min-width: 769px) and (max-width: 1022px) {
-    .dark-mode-btn,
-    .github-icon { 
-        margin: 0 5%; /* Adjust the margin for better visibility */
-    }
+	.dark-mode-btn,
+	.github-icon {
+		margin: 0 5%; /* Adjust the margin for better visibility */
+	}
 }
