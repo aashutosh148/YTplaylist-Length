@@ -13,18 +13,18 @@
             align-items: center;
         }
 
-        .navbar h1 .heading-animation {
-            animation: moveAndDisappear 2s ease-in-out infinite;
-        }
+			.navbar h1 .heading-animation {
+				animation: moveAndDisappear 2s ease-in-out infinite;
+			}
 
-        .youtube-icon {
-            color: red;
-            font-size: 30px;
-            margin-right: 15px;
-        }
-    </style>
-</head>
-<body>
+			.youtube-icon {
+				color: red;
+				font-size: 30px;
+				margin-right: 15px;
+			}
+		</style>
+	</head>
+	<body>
 
     <div class="navbar">
         <h1>
@@ -32,42 +32,28 @@
             <i class='bx bxs-heart' style='color: red;'></i>
             <span class="heading-animation">YouTube Length Calculator</span>
         </h1>
-        <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode </button>
-        <a href=""><i class="fab fa-github github-icon" style="color: red; font-size: 30px; "></i></a>
+        <button class="dark-mode-btn" onclick="toggleDarkMode()">Light Mode</button>
+        <a href="https://github.com/aashutosh148/YTplaylist-Length"><i class="fab fa-github github-icon" style="color: red; font-size: 30px; "></i></a>
     </div>
 
-        <div class="search-bar">
-            <input style="border-radius: 8px;" type="text" id="videoUrl" placeholder="Enter YouTube video URL">
-            <button style="border-radius: 8px;" onclick="calculateLength()">Calculate Length</button>
-        </div>
+   
+
+    <div class="search-bar">
+        <input style="border-radius: 8px;" type="text" id="videoUrl" placeholder="Enter YouTube video URL">
+        <button id="calculate" style="border-radius: 8px;">Calculate Length</button>
+    </div>
+
+
+    <div id="information"></div>
 
     <footer>
         <div class="footer-content">
-            <p>Master <i class='bx bxs-heart' style='color: red;'></i> <a style="color: rgb(232, 32, 75);" href="#">Aashutosh</a></p>
-            <p>Love of <a style="color: rgb(232, 32, 75);" href="#">Aditya</a></p>
+            <p>Master <i class='bx bxs-heart' style='color: red;'></i> <a style="color: rgb(232, 32, 75);" href="https://github.com/aashutosh148">Aashutosh</a></p>
+            <p>Love of <a style="color: rgb(232, 32, 75);" href="https://github.com/aditya-1310">Aditya</a></p>
             <p>Special Partner <a style="color: rgb(232, 32, 75);" href="#">Saad</a></p>
         </div>
     </footer>
 
-    <script>
-        function calculateLength() {
-            // Add your backend logic here to calculate the video length
-        }
-
-        function toggleDarkMode() {
-            const body = document.body;
-            const currentBackgroundColor = window.getComputedStyle(body).backgroundColor;
-            if (currentBackgroundColor === 'rgb(248, 249, 250)') {
-                body.style.backgroundColor = '#212529';
-                body.style.color = '#fff';
-                document.querySelector(".dark-mode-btn").textContent = 'Light Mode';
-            } else {
-                body.style.backgroundColor = '#f8f9fa';
-                body.style.color = '#333';
-                document.querySelector(".dark-mode-btn").innerHTML = 'Dark Mode';
-            }
-        }
-    </script>
-
+    <script src="index.js"></script>
 </body>
 </html>

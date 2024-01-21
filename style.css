@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #faf9f9; 
+    background-color: #212529; 
     color: #333333; 
     transition: background-color 0.3s, color 0.3s;
 }
@@ -63,18 +63,24 @@ footer {
     margin-right: 20px;
 }
 input[type="text"] {
-    /* border: 2px solid rgb(14, 4, 2); */
+    border: 0px;
     padding: 10px;
     padding-right: 0;
-    background-color: #faf9f9;
+    background-color: #cdd0d3;
     border-collapse: collapse;
     margin-left: 64px ;
     margin-right: 8px;
     font-size: 16px;
     width: 690px;
+    outline: none;
+
 }
 
-
+/* input:active {
+    border: 0px;
+    border-collapse: collapse;
+    outline: none;
+  } */
 
 .dark-mode-btn {
     background-color: #343a40; 
@@ -96,14 +102,14 @@ input[type="text"] {
 }
 
 .search-bar button:hover{
-    border-color: #f1ff5c;
+    border-color: #e1e2cd;
   color: white;
-  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  box-shadow: 0 0.5em 0.5em -0.4em #e9eadd;
   transform: translateY(-0.25em);
   cursor: pointer;
 }
 .search-bar button {
-    height: 45px;
+    height: 39px;
     width: 200px;
     text-align: center;
     margin-left: 0px;
@@ -119,11 +125,15 @@ input[type="text"] {
 
 
 body.dark-mode.search-bar button {
-    border-color: #a2541c; /* Border color for light mode */
+    border-color: #9a8576; /* Border color for light mode */
     color: white;
    
 }
 
+h4 {
+    color: white;
+    height: 20px;
+}
 
 .search-bar button:hover {
     cursor: pointer;
@@ -178,7 +188,7 @@ body.dark-mode .search-bar button:hover {
         margin-right: 5px; /* Adjust the margin for better visibility */
     }
 }
-* Media query for screens up to 320px */
+/* Media query for screens up to 320px */
 @media only screen and (max-width: 320px) {
     .fab.fa-youtube.youtube-icon {
         margin-left: 5px; /* Adjust the margin for better visibility */
