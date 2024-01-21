@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Length Calculator</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/boxicons/2.0.7/css/boxicons.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .navbar h1 {
@@ -28,38 +29,45 @@
     <div class="navbar">
         <h1>
             <i class="fab fa-youtube youtube-icon"></i>
+            <i class='bx bxs-heart' style='color: red;'></i>
             <span class="heading-animation">YouTube Length Calculator</span>
         </h1>
         <button class="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode </button>
         <a href=""><i class="fab fa-github github-icon" style="color: red; font-size: 30px; "></i></a>
     </div>
 
-    <div class="content">
         <div class="search-bar">
             <input style="border-radius: 8px;" type="text" id="videoUrl" placeholder="Enter YouTube video URL">
             <button style="border-radius: 8px;" onclick="calculateLength()">Calculate Length</button>
         </div>
-    </div>
 
-    
+    <footer>
+        <div class="footer-content">
+            <p>Master <i class='bx bxs-heart' style='color: red;'></i> <a style="color: rgb(232, 32, 75);" href="#">Aashutosh</a></p>
+            <p>Love of <a style="color: rgb(232, 32, 75);" href="#">Aditya</a></p>
+            <p>Special Partner <a style="color: rgb(232, 32, 75);" href="#">Saad</a></p>
+        </div>
+    </footer>
+
     <script>
         function calculateLength() {
             // Add your backend logic here to calculate the video length
-            
         }
 
         function toggleDarkMode() {
             const body = document.body;
             const currentBackgroundColor = window.getComputedStyle(body).backgroundColor;
-
             if (currentBackgroundColor === 'rgb(248, 249, 250)') {
                 body.style.backgroundColor = '#212529';
                 body.style.color = '#fff';
+                document.querySelector(".dark-mode-btn").textContent = 'Light Mode';
             } else {
                 body.style.backgroundColor = '#f8f9fa';
                 body.style.color = '#333';
+                document.querySelector(".dark-mode-btn").innerHTML = 'Dark Mode';
             }
         }
     </script>
+
 </body>
 </html>

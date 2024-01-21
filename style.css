@@ -3,8 +3,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; 
-    color: #333; 
+    background-color: #faf9f9; 
+    color: #333333; 
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -24,41 +24,72 @@ body {
 }
 
 .navbar h1 {
-    margin: 0 300px 0; 
+    margin: 0 150px 0; 
+    font-size: 24px;
     text-align: center; 
 }
 .search-bar {
     padding: 10px;
-    margin: 100px 90px 10px;
+    margin: 150px 90px 10px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 
-input[type="text"] {
+footer {
+    background-color: #343a40;
+    color: white;
     padding: 10px;
-    font-size: 16px;
-    width: 70%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-button {
-    padding: 10px;
-    font-size: 16px;
-    /* margin:0 150px; */
-    cursor: pointer;
+.footer-content {
+    display: flex;
 }
+
+.footer-content p {
+    margin-right: 10px;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+input[type="text"] {
+    /* border: 2px solid rgb(14, 4, 2); */
+    padding: 10px;
+    padding-right: 0;
+    background-color: #faf9f9;
+    border-collapse: collapse;
+    margin-left: 64px ;
+    margin-right: 8px;
+    font-size: 16px;
+    width: 690px;
+}
+
+
 
 .dark-mode-btn {
     background-color: #343a40; 
     color: #fff;
     border: none;
-    
+    margin-left: 500px ;
     cursor: pointer;
     font-size: 16px;
 }
+.dark-mode-btn {
+    margin-right: auto;
+}
 
 .github-icon {
-    margin-right:290px ; 
+    margin-right:200px ; 
 }
 .fab fa-youtube youtube-icon{
     margin-left: 90px;
@@ -72,18 +103,20 @@ button {
   cursor: pointer;
 }
 .search-bar button {
-    height: 55px;
+    height: 45px;
     width: 200px;
     text-align: center;
-    margin-left: 70px;
+    margin-left: 0px;
     margin-right: 200px;
     background: none;
-    color: #d82121;
-    border: 2px solid;
-    padding: 1em 2em;
+    background-color: red;
+    color: white;
+    /* border: 2px solid; */
+    padding: 0;
     font-size: 16px;
     transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
+
 
 body.dark-mode.search-bar button {
     border-color: #a2541c; /* Border color for light mode */
@@ -106,8 +139,60 @@ body.dark-mode .search-bar button:hover {
 /* Light Mode Hover Effect */
    body:not(.dark-mode) .search-bar button:hover {
     border-color: #e21515; 
-    color: #3c9b19; 
+    color:white; 
     box-shadow: 0 0.5em 0.5em -0.4em #b11010;
     transform: translateY(-0.25em);
 }  
-                                            
+                
+/* Media query for screens up to 768px */
+@media only screen and (max-width: 768px) {
+    .navbar h1, .navbar button {
+        text-align: center;
+        margin: 0; /* Remove any margin for better responsiveness */
+    }
+
+    .dark-mode-btn {
+        margin-left: auto; /* Pushes the Dark Mode button to the right */
+        margin-right: 5%; /* Add a small right margin for better spacing */
+    }
+
+    .github-icon {
+        margin-right: 5%; /* Adjust the margin as a percentage */
+    }
+
+    /* Nested media query for screens up to 600px within the 768px query */
+    @media only screen and (max-width: 600px) {
+        .dark-mode-btn {
+            margin-left: 2%; /* Adjust the margin for better visibility */
+        }
+    }
+}
+
+/* Media query for screens up to 480px */
+@media only screen and (max-width: 480px) {
+    .search-bar button {
+        margin-right: 0;
+    }
+
+    .github-icon {
+        margin-right: 5px; /* Adjust the margin for better visibility */
+    }
+}
+* Media query for screens up to 320px */
+@media only screen and (max-width: 320px) {
+    .fab.fa-youtube.youtube-icon {
+        margin-left: 5px; /* Adjust the margin for better visibility */
+    }
+
+    .bx.bxs-heart {
+        margin-right: 5px; /* Adjust the margin for better visibility */
+    }
+}
+
+/* Media query for screens between 769px and 1022px */
+@media only screen and (min-width: 769px) and (max-width: 1022px) {
+    .dark-mode-btn,
+    .github-icon { 
+        margin: 0 5%; /* Adjust the margin for better visibility */
+    }
+}
