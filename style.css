@@ -135,7 +135,8 @@ input[type="text"] {
 	padding: 0;
 	font-size: 16px;
 	transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,
-		transform 0.25s;
+	transform 0.25s;
+	border: 0px;
 }
 
 body.dark-mode.search-bar button {
