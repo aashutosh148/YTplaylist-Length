@@ -2,7 +2,7 @@
 
 ## Overview
 
-YouTube Playlist Analytics is a powerful tool leveraging the Google YouTube API v3 to compute insightful metrics for any given playlist. These metrics encompass the total video duration, average video length, and adjusted durations at varying playback speeds. Check it out 🔗 [here](https://youtube-playlist-stat.netlify.app/).
+YouTube Playlist Analytics is a powerful tool leveraging the Google YouTube API v3 to compute insightful metrics for any given playlist. These metrics encompass the total video duration, average video length, and adjusted durations at varying playback speeds. Check it out 🔗 [here](https://ytplaylist-stat.netlify.app/).
 
 ## Features
 
