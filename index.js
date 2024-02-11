@@ -95,14 +95,34 @@ async function calculatePlaylistStats() {
 }
 
 function displayStoredPlaylistStats(statsData) {
+    if (statsData.totalVideos === 0) {
+        let countdown = 4;
+        const countdownInterval = setInterval(function () {
+            document.getElementById('result').innerHTML = `
+                <h3>:-(  ERROR  Enter a Valid URL</h3>
+                <h4>Redirecting in ${countdown} seconds...</h4>
+            `;
+            countdown--;
 
-    document.getElementById('result').innerHTML = `
-        <p>No of videos : ${statsData.totalVideos}</p>
-        <p>Average length of video : ${statsData.avg}</p>
-        <p>Total length of playlist : ${statsData.formattedDuration}</p>
-        <p>At 1.25x : ${statsData.adjusted1_25x}</p>
-        <p>At 1.50x : ${statsData.adjusted1_5x}</p>
-        <p>At 1.75x : ${statsData.adjusted1_75x}</p>
-        <p>At 2.00x : ${statsData.adjusted2x}</p>
-    `;
+            if (countdown < 0) {
+                clearInterval(countdownInterval);
+                location.reload();
+            }
+        }, 1000);
+    } else {
+        document.getElementById('result').innerHTML = `
+            <p>No of videos : ${statsData.totalVideos}</p>
+            <p>Average length of video : ${statsData.avg}</p>
+            <p>Total length of playlist : ${statsData.formattedDuration}</p>
+            <p>At 1.25x : ${statsData.adjusted1_25x}</p>
+            <p>At 1.50x : ${statsData.adjusted1_5x}</p>
+            <p>At 1.75x : ${statsData.adjusted1_75x}</p>
+            <p>At 2.00x : ${statsData.adjusted2x}</p>
+            <button class="tryAgain" style="border-radius: 8px;" onclick="tryAgain()">Try Again</button>
+        `;
+    }
+}
+
+function tryAgain() {
+    location.reload();
 }

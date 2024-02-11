@@ -32,7 +32,6 @@ body {
 	padding: 10px;
 	margin: 1px 90px 10px;
 	display: flex;
-	/* justify-content: space-between; */
 	align-items: center;
 }
 
@@ -88,13 +87,6 @@ input[type="text"] {
 	width: 690px;
 	outline: none;
 }
-
-/* input:active {
-    border: 0px;
-    border-collapse: collapse;
-    outline: none;
-  } */
-
 .dark-mode-btn {
 	background-color: #343a40;
 	color: #ece8e8;
@@ -115,14 +107,14 @@ input[type="text"] {
 	margin-left: 90px;
 }
 
-.search-bar button:hover {
+.search-bar button:hover , .tryAgain:hover{
 	border-color: #e1e2cd;
 	color: white;
 	box-shadow: 0 0.5em 0.5em -0.4em #e9eadd;
 	transform: translateY(-0.25em);
 	cursor: pointer;
 }
-.search-bar button {
+.search-bar  button , .tryAgain {
 	height: 39px;
 	width: 200px;
 	text-align: center;
@@ -131,7 +123,6 @@ input[type="text"] {
 	background: none;
 	background-color: red;
 	color: white;
-	/* border: 2px solid; */
 	padding: 0;
 	font-size: 16px;
 	transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,
@@ -140,7 +131,7 @@ input[type="text"] {
 }
 
 body.dark-mode.search-bar button {
-	border-color: #9a8576; /* Border color for light mode */
+	border-color: #9a8576; 
 	color: white;
 }
 
@@ -149,9 +140,6 @@ h4 {
 	height: 20px;
 }
 
-.search-bar button:hover {
-	cursor: pointer;
-}
 
 body.dark-mode .search-bar button:hover {
 	border-color: #c7d34a;
@@ -160,63 +148,58 @@ body.dark-mode .search-bar button:hover {
 	transform: translateY(-0.25em);
 }
 /* Light Mode Hover Effect */
-body:not(.dark-mode) .search-bar button:hover {
+body:not(.dark-mode) .search-bar button:hover , .tryAgain:hover{
 	border-color: #e21515;
 	color: white;
 	box-shadow: 0 0.5em 0.5em -0.4em #b11010;
 	transform: translateY(-0.25em);
 }
-
-/* Media query for screens up to 768px */
 @media only screen and (max-width: 768px) {
 	.navbar h1,
 	.navbar button {
 		text-align: center;
-		margin: 0; /* Remove any margin for better responsiveness */
-	}
-
+		margin: 0;
+    }
 	.dark-mode-btn {
-		margin-left: auto; /* Pushes the Dark Mode button to the right */
-		margin-right: 5%; /* Add a small right margin for better spacing */
+		margin-left: auto; 
+		margin-right: 5%; 
 	}
 
 	.github-icon {
-		margin-right: 5%; /* Adjust the margin as a percentage */
+		margin-right: 5%;
 	}
 
-	/* Nested media query for screens up to 600px within the 768px query */
+	
 	@media only screen and (max-width: 600px) {
 		.dark-mode-btn {
-			margin-left: 2%; /* Adjust the margin for better visibility */
+			margin-left: 2%; 
 		}
 	}
 }
 
-/* Media query for screens up to 480px */
 @media only screen and (max-width: 480px) {
 	.search-bar button {
 		margin-right: 0;
 	}
 
 	.github-icon {
-		margin-right: 5px; /* Adjust the margin for better visibility */
+		margin-right: 5px; 
 	}
 }
-/* Media query for screens up to 320px */
+
 @media only screen and (max-width: 320px) {
 	.fab.fa-youtube.youtube-icon {
-		margin-left: 5px; /* Adjust the margin for better visibility */
+		margin-left: 5px; 
 	}
 
 	.bx.bxs-heart {
-		margin-right: 5px; /* Adjust the margin for better visibility */
+		margin-right: 5px;
 	}
 }
 
-/* Media query for screens between 769px and 1022px */
 @media only screen and (min-width: 769px) and (max-width: 1022px) {
 	.dark-mode-btn,
 	.github-icon {
-		margin: 0 5%; /* Adjust the margin for better visibility */
+		margin: 0 5%;
 	}
 }
