@@ -41,6 +41,7 @@ function toggleDarkMode() {
 
 document.getElementById('calculate').addEventListener('click', async function () {
     calculatePlaylistStats();
+    this.disabled = true;
 });
 
 document.getElementById('videoUrl').addEventListener('keydown', function (event) {
@@ -90,28 +91,18 @@ async function calculatePlaylistStats() {
         adjusted1_75x: formattedAdjusted1_75x,
         adjusted2x: formattedAdjusted2x
     };
-
-    localStorage.setItem('playlistStats', JSON.stringify(statsData));
-
-    location.reload();
+    displayStoredPlaylistStats(statsData);
 }
 
-function displayStoredPlaylistStats() {
-    const storedStatsData = localStorage.getItem('playlistStats');
+function displayStoredPlaylistStats(statsData) {
 
-    if (storedStatsData) {
-        const statsData = JSON.parse(storedStatsData);
-
-        document.getElementById('result').innerHTML = `
-            <p>No of videos : ${statsData.totalVideos}</p>
-            <p>Average length of video : ${statsData.avg}</p>
-            <p>Total length of playlist : ${statsData.formattedDuration}</p>
-            <p>At 1.25x : ${statsData.adjusted1_25x}</p>
-            <p>At 1.50x : ${statsData.adjusted1_5x}</p>
-            <p>At 1.75x : ${statsData.adjusted1_75x}</p>
-            <p>At 2.00x : ${statsData.adjusted2x}</p>
-        `;
-    }
+    document.getElementById('result').innerHTML = `
+        <p>No of videos : ${statsData.totalVideos}</p>
+        <p>Average length of video : ${statsData.avg}</p>
+        <p>Total length of playlist : ${statsData.formattedDuration}</p>
+        <p>At 1.25x : ${statsData.adjusted1_25x}</p>
+        <p>At 1.50x : ${statsData.adjusted1_5x}</p>
+        <p>At 1.75x : ${statsData.adjusted1_75x}</p>
+        <p>At 2.00x : ${statsData.adjusted2x}</p>
+    `;
 }
-
-window.onload = displayStoredPlaylistStats;
